@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Your Video</title>
+  <meta charset="UTF-8">
+  <title>Click to Watch</title>
   <style>
-    html, body {
-      margin: 0; padding: 0; height: 100%; overflow: hidden;
+    body {
+      margin: 0;
+      height: 100vh;
       background: black;
-      display: flex; justify-content: center; align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+    #cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
     }
     video {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      display: none;
     }
   </style>
 </head>
 <body>
-  <video autoplay loop playsinline>
-    <source src="myvideo.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+  <div id="cover">
+    <h1>🔊 Click to Watch</h1>
+  </div>
+  <video id="vid" loop playsinline>
+    <source src="myvideo.mp4" type="video/mp4">
   </video>
+
+  <script>
+    const vid = document.getElementById('vid');
+    const cover = document.getElementById('cover');
+    cover.onclick = () => {
+      cover.style.display = 'none';
+      vid.style.display = 'block';
+      vid.muted = false;
+      vid.play();
+    };
+  </script>
 </body>
 </html>
