@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome</title>
-  <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+  <meta charset="UTF-8" />
+  <title>Get Rickrolled</title>
+  <style>
+    /* Fullscreen iframe style */
+    html, body {
+      margin: 0; padding: 0; height: 100%; overflow: hidden;
+      background: black;
+      display: flex; justify-content: center; align-items: center;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <p>If u ain't redirected... <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a> 💀</p>
+  <iframe 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&loop=1&playlist=dQw4w9WgXcQ" 
+    allow="autoplay" 
+    allowfullscreen
+    title="Rickroll Video"
+  ></iframe>
 </body>
 </html>
