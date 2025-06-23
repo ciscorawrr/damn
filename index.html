@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Get Rickrolled</title>
+  <title>Your Video</title>
   <style>
-    /* Fullscreen iframe style */
     html, body {
       margin: 0; padding: 0; height: 100%; overflow: hidden;
       background: black;
       display: flex; justify-content: center; align-items: center;
     }
-    iframe {
+    video {
       width: 100vw;
       height: 100vh;
-      border: none;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&loop=1&playlist=dQw4w9WgXcQ" 
-    allow="autoplay" 
-    allowfullscreen
-    title="Rickroll Video"
-  ></iframe>
+  <video autoplay muted loop playsinline>
+    <source src="myvideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 </body>
 </html>
